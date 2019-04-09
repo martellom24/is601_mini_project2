@@ -5,8 +5,9 @@
 
 <body>
     @include('includes.nav')
-
-    @yield('content')
+    <main role="main">
+        @yield('content')
+    </main>
 
     @include('includes.jsfooter')
     @include('includes.footer')
