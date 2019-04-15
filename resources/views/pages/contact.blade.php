@@ -1,11 +1,11 @@
-@extends('layouts.default')
+@extends('layouts.app')
 
 @section('content')
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="cover-heading text-center">Sign Up Form</h1>
+                    <h1 class="cover-heading text-center">Contact Me</h1>
                     <form id="contact-form" class="contact-form" action="{{route('contact')}}" method="POST">
                         {{ csrf_field() }}
                         <div class="form-group">

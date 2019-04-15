@@ -5,8 +5,9 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Cars;
 
-class RequestTest extends TestCase
+class CarTest extends TestCase
 {
     /**
      * A basic unit test example.
@@ -16,6 +17,13 @@ class RequestTest extends TestCase
     public function testExample()
     {
         $this->assertTrue(true);
-        //$this->assertStatus(200);
+    }
+
+
+    public function testInsertUser()
+    {
+        factory(Cars::class)->create();
+
+        $this->assertDatabaseHas('cars', ['make' => 'ford']);
     }
 }
