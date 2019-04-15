@@ -49,23 +49,9 @@ class CarTest extends TestCase
 
     public function testMakeOfCar()
     {
-
         $cars = Cars::pluck('make');
         $this->assertContains('honda', $cars);
         $this->assertContains('ford', $cars);
         $this->assertContains('toyota', $cars);
     }
-
-//    public function testIsInteger()
-//    {
-//        $id = Cars::get('year');
-//        //$id = 1;
-//        if(is_int($id)){
-//            dd('is int' . $id);
-//        } else {
-//            dd('not int' . $id);
-//        }
-//        //dd($id->getType());
-//        //$this->assertTrue(is_int($id));
-//    }
 }
