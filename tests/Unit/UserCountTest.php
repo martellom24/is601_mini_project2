@@ -2,13 +2,12 @@
 
 namespace Tests\Unit;
 
-use phpDocumentor\Reflection\Types\Array_;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\User;
 
-class UserTest extends TestCase
+class UserCountTest extends TestCase
 {
     /**
      * A basic unit test example.
@@ -17,18 +16,9 @@ class UserTest extends TestCase
      */
     public function testExample()
     {
-        $this->assertTrue(true);
-    }
-
-    /**
-     * test User table
-     *
-     * @return void
-     */
-    public function testInsertUser()
-    {
-        //factory(User::class)->create();
-
+        $rowCount = count(User::get());
+        $UserCount = $rowCount;
+        $this->countOf($UserCount);
         $this->assertTrue(true);
     }
 }

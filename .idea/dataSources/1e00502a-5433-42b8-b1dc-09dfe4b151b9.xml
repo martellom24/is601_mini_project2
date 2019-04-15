@@ -39,7 +39,7 @@
     </column>
     <column id="15" parent="6" name="year">
       <Position>4</Position>
-      <DataType>varchar|0s</DataType>
+      <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="16" parent="6" name="created_at">
